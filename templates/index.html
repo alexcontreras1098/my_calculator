@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2> This is my loan calculator! </h2>
+<form  method="post">
+  <table>
+    <tr>
+      <td> Loan Amount: </td> <td> <input type="text" name="Loan_Amount" /> </td>
+    </tr>
+    <tr>
+      <td> Years: </td> <td> <input type="text" name="Years" /> </td>
+    </tr>
+    <tr>
+      <td> Interest Rate: </td> <td> <input type="text" name="Interest_Rate" /> </td>
+    </tr>
+  </table>
+    <br>
+  <input class="button" type="submit" formaction="/calculate" value="Calculate my Payment" />
+</form>
+
+<p> {{ display }} </p>
+<div style="clear:both;"></div>
+
+{% endblock %}
